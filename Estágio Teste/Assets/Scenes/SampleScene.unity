@@ -3587,11 +3587,11 @@ MonoBehaviour:
       btnContinue: Continuar
     - speakerName: Guardinha
       speakerImage: {fileID: 263563607799035208, guid: 86bf5f3651e394845a1e886fb51d79c1, type: 3}
-      phrase: "Entendi a hist\xF3ria mas porque ele ta brilhando"
+      phrase: "Entendi a hist\xF3ria mas porque ele ta brilhando?"
       btnContinue: Continuar
     - speakerName: Hanz
       speakerImage: {fileID: 38429805831249749, guid: 86bf5f3651e394845a1e886fb51d79c1, type: 3}
-      phrase: "Ele ta brilhando porque voc\xEA usou o a erva ali at\xE1s."
+      phrase: "O tempo e espa\xE7o est\xE3o muito confusos no forte..."
       btnContinue: Continuar
 --- !u!1 &1865993071
 GameObject:
@@ -3909,8 +3909,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
