@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class InteractableObject : MonoBehaviour
@@ -9,6 +10,9 @@ public class InteractableObject : MonoBehaviour
     CinemachineVirtualCamera vcamInteractbleObject;
     Button exitInteract;
     AlreadyInteracting alrScript;
+
+    [SerializeField]
+    private UnityEvent interactedShowDialogue;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +35,13 @@ public class InteractableObject : MonoBehaviour
         }
         vcamInteractbleObject.gameObject.SetActive(true);
         exitInteract.gameObject.SetActive(true);
+        Invoke("ShowDialogue", 1.8f);
         //exitInteract.enabled = true;
+    }
+
+    private void ShowDialogue()
+    {
+        interactedShowDialogue.Invoke();
     }
 
 
