@@ -1,16 +1,7 @@
 fileFormatVersion: 2
-guid: 8b45f86e0cbf4d04281c3b09d7a2cc31
+guid: dcdca8a80d59b5541816d6bdec494835
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 179498852570420392
-    second: hans_stadden_0
-  - first:
-      213: 2645384773657039290
-    second: hans_stadden_1
-  - first:
-      213: 3306567012918023025
-    second: hans_stadden_2
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -50,7 +41,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -120,74 +111,11 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: hans_stadden_0
-      rect:
-        serializedVersion: 2
-        x: 184
-        y: 460
-        width: 816
-        height: 1080
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8a4dc016145bd7200800000000000000
-      internalID: 179498852570420392
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hans_stadden_1
-      rect:
-        serializedVersion: 2
-        x: 1174
-        y: 988
-        width: 711
-        height: 927
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ab11e009f6b46b420800000000000000
-      internalID: 2645384773657039290
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hans_stadden_2
-      rect:
-        serializedVersion: 2
-        x: 1174
-        y: 34
-        width: 711
-        height: 927
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 173d007ed2943ed20800000000000000
-      internalID: 3306567012918023025
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 2fa20923b9570524f880058bd524eb89
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
