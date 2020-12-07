@@ -9,12 +9,15 @@ public class arrowMovement : MonoBehaviour
     public float ArrowSpeed;
     private Transform originalPostion;
     private Rigidbody2D rb;
+    public gameController gc;
 
-    void Start()
+    private void OnEnable()  
     {
         ui = FindObjectOfType<Canvas>();
         this.transform.SetParent(ui.transform);
         rb = GetComponent<Rigidbody2D>();
+        gc = GetComponentInParent<gameController>();
+        
     }
 
 
@@ -29,7 +32,7 @@ public class arrowMovement : MonoBehaviour
         
         if(collision.gameObject.tag == "dano")
         {
-
+            gc.TakeDamage(-1);
 
         }
 
