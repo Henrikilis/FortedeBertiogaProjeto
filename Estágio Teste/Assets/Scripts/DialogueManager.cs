@@ -53,6 +53,7 @@ public class DialogueManager : MonoBehaviour
         if(counter == currentDialogue.GetPhrases().Length)
         {
             dialogueBox.gameObject.SetActive(false);
+            currentDialogue.DoAction();
             currentDialogue = null;
             counter = 0;
             return;
