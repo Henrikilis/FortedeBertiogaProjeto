@@ -10,6 +10,8 @@ TagManager:
   - PlayerCamera
   - CameraMovRight
   - CameraMovLeft
+  - escudo
+  - dano
   layers:
   - Default
   - TransparentFX
