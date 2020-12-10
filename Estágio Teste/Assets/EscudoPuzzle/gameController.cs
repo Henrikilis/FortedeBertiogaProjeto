@@ -80,7 +80,7 @@ public class gameController : MonoBehaviour
         
         Instantiate(arrowPrefab, spawnPoints[n].transform.position, arrowPrefab.transform.rotation);
       //  , arrowPrefab.transform.parent = this.gameObject.transform
-
+       //lalalaala
 
         yield return new WaitForSeconds(spawnTimer);
         isRunning = true;
