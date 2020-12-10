@@ -14,6 +14,9 @@ public class DialogueText
     private Sprite speakerImage;
 
     [SerializeField]
+    private bool ghost;
+
+    [SerializeField]
     [TextArea(1,4)]
     private string phrase;
 
@@ -29,6 +32,11 @@ public class DialogueText
     public string GetSpeakerName()
     {
         return speakerName;
+    }
+
+    public bool GetGhost()
+    {
+        return ghost;
     }
 
     public Sprite GetSpeakerImage()
