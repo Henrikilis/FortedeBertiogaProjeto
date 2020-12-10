@@ -28,6 +28,9 @@ public class DialogueManager : MonoBehaviour
     private int counter = 0;
     private Dialogue currentDialogue;
 
+    public Material m_dialogoNormal;
+    public Material m_dialogoFantasma;
+
 
     void Update()
     {
@@ -63,6 +66,14 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = currentDialogue.GetPhrases()[counter].GetPhrase();
         btnContinue.text = currentDialogue.GetPhrases()[counter].GetButtonContinue();
         speakerImage.sprite = currentDialogue.GetPhrases()[counter].GetSpeakerImage();
+        if (currentDialogue.GetPhrases()[counter].GetGhost())
+        {
+            speakerImage.material = m_dialogoFantasma;
+        }
+        else
+        {
+            speakerImage.material = m_dialogoNormal;
+        }
         dialogueBox.gameObject.SetActive(true);
         counter++;
     }

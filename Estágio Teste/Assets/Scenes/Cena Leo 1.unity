@@ -4157,36 +4157,44 @@ MonoBehaviour:
     phrases:
     - speakerName: Guarda
       speakerImage: {fileID: -5359614995827271970, guid: 86bf5f3651e394845a1e886fb51d79c1, type: 3}
+      ghost: 0
       phrase: "Nossa, esse escudo \xE9 bem bonito."
       btnContinue: Continuar
     - speakerName: Hans
       speakerImage: {fileID: 179498852570420392, guid: 8b45f86e0cbf4d04281c3b09d7a2cc31, type: 3}
+      ghost: 0
       phrase: "De fato! Ele me traz boas lembran\xE7as do Martin."
       btnContinue: Continuar
     - speakerName: Guarda
       speakerImage: {fileID: -5359614995827271970, guid: 86bf5f3651e394845a1e886fb51d79c1, type: 3}
+      ghost: 0
       phrase: Quem?
       btnContinue: Continuar
     - speakerName: Hans
       speakerImage: {fileID: 2645384773657039290, guid: 8b45f86e0cbf4d04281c3b09d7a2cc31, type: 3}
+      ghost: 0
       phrase: "Martin Afonso de Souza, foi a mando dele que este forte foi constru\xEDdo.
         Ele veio de Portugal em 1530, com quatro navios."
       btnContinue: Continuar
     - speakerName: Hans
       speakerImage: {fileID: 2645384773657039290, guid: 8b45f86e0cbf4d04281c3b09d7a2cc31, type: 3}
+      ghost: 0
       phrase: "Depois de chegar aqui, em 1532, com a ajuda de Jo\xE3o Ramalho e Ant\xF4nio
         Rodrigues, fundou a primeira vila ao estilo portugu\xEAs no Brasil."
       btnContinue: Continuar
     - speakerName: Hans
       speakerImage: {fileID: 3306567012918023025, guid: 8b45f86e0cbf4d04281c3b09d7a2cc31, type: 3}
+      ghost: 0
       phrase: "A vila de S\xE3o Vicente!"
       btnContinue: Continuar
     - speakerName: Guarda
       speakerImage: {fileID: -5359614995827271970, guid: 86bf5f3651e394845a1e886fb51d79c1, type: 3}
+      ghost: 0
       phrase: "Caramba, ele foi muito importante ent\xE3o."
       btnContinue: Continuar
     - speakerName: Hans
       speakerImage: {fileID: 179498852570420392, guid: 8b45f86e0cbf4d04281c3b09d7a2cc31, type: 3}
+      ghost: 0
       phrase: "Muito! Sem falar que foi honrado por combater muitos franceses que
         atacavam pelo litoral, \xE9 s\xF3 tocar no escudo que voc\xEA ver\xE1 como
         foi..."
@@ -17300,6 +17308,8 @@ MonoBehaviour:
   btnContinue: {fileID: 787449881}
   dialogueBox: {fileID: 1620624359}
   alrScript: {fileID: 1064703768}
+  m_dialogoNormal: {fileID: 2100000, guid: 9790d06cd860cbf4e8bca7d455b2c1fc, type: 2}
+  m_dialogoFantasma: {fileID: 2100000, guid: 44973fbd8cac2ca47b852d0ae748b1c3, type: 2}
 --- !u!4 &1273200524
 Transform:
   m_ObjectHideFlags: 0
@@ -17650,27 +17660,33 @@ MonoBehaviour:
     phrases:
     - speakerName: Guarda
       speakerImage: {fileID: -5359614995827271970, guid: 86bf5f3651e394845a1e886fb51d79c1, type: 3}
+      ghost: 0
       phrase: Que armadura legal!
       btnContinue: Continuar
     - speakerName: Hans
       speakerImage: {fileID: 3306567012918023025, guid: 8b45f86e0cbf4d04281c3b09d7a2cc31, type: 3}
+      ghost: 0
       phrase: "Pena que n\xE3o foi t\xE3o \xFAtil."
       btnContinue: Continuar
     - speakerName: Guarda
       speakerImage: {fileID: -5359614995827271970, guid: 86bf5f3651e394845a1e886fb51d79c1, type: 3}
+      ghost: 0
       phrase: "U\xE9, mas por que?"
       btnContinue: Continuar
     - speakerName: Hans
       speakerImage: {fileID: 2645384773657039290, guid: 8b45f86e0cbf4d04281c3b09d7a2cc31, type: 3}
+      ghost: 0
       phrase: "Ela foi feita para o clima Europeu. No calor do Brasil, era uma tortura
         usar isso, no m\xE1ximo s\xF3 a parte do torso."
       btnContinue: Continuar
     - speakerName: Guarda
       speakerImage: {fileID: -5359614995827271970, guid: 86bf5f3651e394845a1e886fb51d79c1, type: 3}
+      ghost: 0
       phrase: "Que pena, um soldado assim seria incr\xEDvel."
       btnContinue: Continuar
     - speakerName: Hans
       speakerImage: {fileID: 179498852570420392, guid: 8b45f86e0cbf4d04281c3b09d7a2cc31, type: 3}
+      ghost: 0
       phrase: "Mas os soldados que defendiam esse forte eram incr\xEDveis sim, \xE9
         s\xF3 tocar na armadura e voc\xEA ver\xE1..."
       btnContinue: Tocar
@@ -18377,53 +18393,64 @@ MonoBehaviour:
   dialogue:
     phrases:
     - speakerName: Fantasma
-      speakerImage: {fileID: 179498852570420392, guid: 8b45f86e0cbf4d04281c3b09d7a2cc31, type: 3}
+      speakerImage: {fileID: 21300000, guid: d35f97268fd13d847b7854eacb9db27b, type: 3}
+      ghost: 1
       phrase: "Ei Voc\xEA a\xED! Qual seu nome?"
       btnContinue: Continuar
     - speakerName: Guarda
       speakerImage: {fileID: -5359614995827271970, guid: 86bf5f3651e394845a1e886fb51d79c1, type: 3}
+      ghost: 0
       phrase: Aaaaaaaaaaaaaaaaaaaaaah um fantasma, meu Deus !!
       btnContinue: Continuar
     - speakerName: Fantasma
       speakerImage: {fileID: 2645384773657039290, guid: 8b45f86e0cbf4d04281c3b09d7a2cc31, type: 3}
+      ghost: 1
       phrase: "Calma! Calma, amigo, eu n\xE3o estou aqui pra te fazer mal, s\xF3
         vim visitar um local que \xE9 muito querido para mim."
       btnContinue: Continuar
     - speakerName: Guarda
       speakerImage: {fileID: -5359614995827271970, guid: 86bf5f3651e394845a1e886fb51d79c1, type: 3}
+      ghost: 0
       phrase: "Quem \xE9 voc\xEA?"
       btnContinue: Continuar
     - speakerName: Fantasma
       speakerImage: {fileID: 3306567012918023025, guid: 8b45f86e0cbf4d04281c3b09d7a2cc31, type: 3}
+      ghost: 1
       phrase: "O que? Voc\xEA n\xE3o me reconhece? Sou uma das figuras mais importantes
         da hist\xF3ria do Brasil!"
       btnContinue: Continuar
     - speakerName: Guarda
       speakerImage: {fileID: -5359614995827271970, guid: 86bf5f3651e394845a1e886fb51d79c1, type: 3}
+      ghost: 0
       phrase: "Eh\u2026 desculpe seu fantasma mas n\xE3o fa\xE7o ideia de quem voc\xEA
         seja."
       btnContinue: Continuar
     - speakerName: Fantasma
       speakerImage: {fileID: 179498852570420392, guid: 8b45f86e0cbf4d04281c3b09d7a2cc31, type: 3}
+      ghost: 1
       phrase: "Hum\u2026 tudo bem, aparentemente a maioria dos brasileiros j\xE1
         se esqueceu de mim tamb\xE9m, mas \xE9 por isso que eu estou aqui!"
       btnContinue: Continuar
     - speakerName: Fantasma
       speakerImage: {fileID: 2645384773657039290, guid: 8b45f86e0cbf4d04281c3b09d7a2cc31, type: 3}
+      ghost: 1
       phrase: "Me diga seu seguran\xE7a, voc\xEA sabe a hist\xF3ria do forte que
         protege?"
       btnContinue: Continuar
     - speakerName: Guarda
       speakerImage: {fileID: -5359614995827271970, guid: 86bf5f3651e394845a1e886fb51d79c1, type: 3}
+      ghost: 0
       phrase: "Bom\u2026 eu sei que ele \xE9 velh-"
       btnContinue: Continuar
     - speakerName: Fantasma
       speakerImage: {fileID: 3306567012918023025, guid: 8b45f86e0cbf4d04281c3b09d7a2cc31, type: 3}
+      ghost: 1
       phrase: "\u2026 que decep\xE7\xE3o, vamos, levante homem, est\xE1 na hora de
         uma aula de hist\xF3ria fantasmag\xF3rica!"
       btnContinue: Continuar
     - speakerName: Fantasma
       speakerImage: {fileID: 179498852570420392, guid: 8b45f86e0cbf4d04281c3b09d7a2cc31, type: 3}
+      ghost: 1
       phrase: "Interaja com os objetos que eu destacar para  aprender de uma vez
         a hist\xF3ria do forte que voc\xEA protege!"
       btnContinue: Continuar
@@ -19911,18 +19938,22 @@ MonoBehaviour:
     phrases:
     - speakerName: Hans
       speakerImage: {fileID: 21300000, guid: d35f97268fd13d847b7854eacb9db27b, type: 3}
+      ghost: 0
       phrase: "Este canh\xE3o foi usado para defender..."
       btnContinue: Continuar
     - speakerName: Guarda
       speakerImage: {fileID: -5359614995827271970, guid: 86bf5f3651e394845a1e886fb51d79c1, type: 3}
+      ghost: 0
       phrase: E para onde tecnicamente ele vai me levar?
       btnContinue: Continuar
     - speakerName: Hans
       speakerImage: {fileID: 2645384773657039290, guid: 8b45f86e0cbf4d04281c3b09d7a2cc31, type: 3}
+      ghost: 0
       phrase: Para algum lugar no passado deste forte.
       btnContinue: Continuar
     - speakerName: Hans
       speakerImage: {fileID: 3306567012918023025, guid: 8b45f86e0cbf4d04281c3b09d7a2cc31, type: 3}
+      ghost: 0
       phrase: "Ent\xE3o, est\xE1 preparado? \xC9 s\xF3 tocar no canh\xE3o..."
       btnContinue: Tocar
     lastDialogueAction:
@@ -20383,7 +20414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 44973fbd8cac2ca47b852d0ae748b1c3, type: 2}
+  m_Material: {fileID: 2100000, guid: 9790d06cd860cbf4e8bca7d455b2c1fc, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -20704,14 +20735,17 @@ MonoBehaviour:
     phrases:
     - speakerName: Hanz
       speakerImage: {fileID: -5359614995827271970, guid: 86bf5f3651e394845a1e886fb51d79c1, type: 3}
+      ghost: 0
       phrase: "Esse \xE9 um canh\xE3o do tempo em que..."
       btnContinue: Continuar
     - speakerName: Guardinha
       speakerImage: {fileID: 263563607799035208, guid: 86bf5f3651e394845a1e886fb51d79c1, type: 3}
+      ghost: 0
       phrase: "Entendi a hist\xF3ria mas porque ele ta brilhando?"
       btnContinue: Continuar
     - speakerName: Hanz
       speakerImage: {fileID: 38429805831249749, guid: 86bf5f3651e394845a1e886fb51d79c1, type: 3}
+      ghost: 0
       phrase: "O tempo e espa\xE7o est\xE3o muito confusos no forte..."
       btnContinue: Continuar
     lastDialogueAction:

@@ -107,7 +107,7 @@ Shader "GhostObject"
 }
 /*ASEBEGIN
 Version=18712
-923;73;531;655;1719.981;1057.942;4.557506;False;False
+974;73;480;655;1525.145;1401.154;5.915455;False;False
 Node;AmplifyShaderEditor.Vector2Node;3;-1178.45,404.531;Inherit;False;Constant;_Vector0;Vector 0;4;0;Create;True;0;0;0;False;0;False;2,2;0,0;0;3;FLOAT2;0;FLOAT;1;FLOAT;2
 Node;AmplifyShaderEditor.TextureCoordinatesNode;4;-1011.374,367.7951;Inherit;False;0;-1;2;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT2;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.PannerNode;5;-773.9468,528.9758;Inherit;False;3;0;FLOAT2;0,0;False;2;FLOAT2;1,0;False;1;FLOAT;0.3;False;1;FLOAT2;0
@@ -150,4 +150,4 @@ WireConnection;0;2;19;0
 WireConnection;0;11;14;0
 WireConnection;0;12;14;0
 ASEEND*/
-//CHKSM=DEFA440C3D2C1D86CC5AFF319EED99D327C97B7F
+//CHKSM=E355E9F69CB3ED9C8FF65FB43A265FF29B4EA6A3
