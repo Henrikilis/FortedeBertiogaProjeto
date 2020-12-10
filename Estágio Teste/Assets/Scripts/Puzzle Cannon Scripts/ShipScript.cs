@@ -6,7 +6,7 @@ using TouchScript.Gestures;
 
 public class ShipScript : MonoBehaviour
 {
-    public bool ally;
+    //public bool ally;
 
     public bool direita;
 
@@ -14,15 +14,15 @@ public class ShipScript : MonoBehaviour
 
     public CannonPuzzleScript manager;
 
-    void OnEnable()
-    {
-        GetComponent<TapGesture>().Tapped += Toque;
-    }
+    //void OnEnable()
+    //{
+    //    GetComponent<TapGesture>().Tapped += Toque;
+    //}
 
-    void OnDisable()
-    {
-        GetComponent<TapGesture>().Tapped -= Toque;
-    }
+    //void OnDisable()
+    //{
+    //    GetComponent<TapGesture>().Tapped -= Toque;
+    //}
 
     private void FixedUpdate()
     {
@@ -47,17 +47,17 @@ public class ShipScript : MonoBehaviour
 
     }
 
-    void Toque(object o, EventArgs e)
-    {
-        if (ally)
-        {
-            manager.AllyToque();
-        }
-        else
-        {
-            manager.Toque();
-        }
-        Destroy(gameObject);
-    }
+    //void Toque(object o, EventArgs e)
+    //{
+    //    if (ally)
+    //    {
+    //        manager.AllyToque();
+    //    }
+    //    else
+    //    {
+    //        manager.Toque();
+    //    }
+    //    Destroy(gameObject);
+    //}
 
 }

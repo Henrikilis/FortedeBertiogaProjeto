@@ -12,6 +12,7 @@ public class CannonPuzzleScript : MonoBehaviour
     [SerializeField]
     private float objectiveCount;
 
+    public float spawnHeight;
     [Header("Enemy Spawn Timers")]
     public float minTime = 8;
     public float maxTime = 14;
@@ -41,7 +42,7 @@ public class CannonPuzzleScript : MonoBehaviour
         {
             Spawn();
             currentSpawnTime = 0;
-            spawnTime = Random.Range(minTime , maxTime);
+            spawnTime = Random.Range(minTime, maxTime);
         }
     }
 
@@ -69,7 +70,7 @@ public class CannonPuzzleScript : MonoBehaviour
             r2 *= -1;
         }
 
-        Vector3 spawnPos = new Vector3(Camera.main.transform.position.x + r2, 3.2f, r1);
+        Vector3 spawnPos = new Vector3(Camera.main.transform.position.x + r2, spawnHeight, r1);
         GameObject obj = Instantiate(shipPrefab);
         Destroy(obj, 15);
         obj.transform.position = spawnPos;
@@ -92,8 +93,8 @@ public class CannonPuzzleScript : MonoBehaviour
             r2 *= -1;
         }
 
-        Vector3 spawnPos = new Vector3(Camera.main.transform.position.x + r2, 3.2f, r1);
-        GameObject obj = Instantiate(shipPrefab);
+        Vector3 spawnPos = new Vector3(Camera.main.transform.position.x + r2, spawnHeight, r1);
+        GameObject obj = Instantiate(allyShipPrefab);
         Destroy(obj, 15);
         obj.transform.position = spawnPos;
         obj.GetComponent<ShipScript>().manager = this;
@@ -101,6 +102,21 @@ public class CannonPuzzleScript : MonoBehaviour
         {
             obj.GetComponent<ShipScript>().direita = false;
         }
+    }
+
+    public void EnemyHit()
+    {
+        objectiveCount++;
+        if (objectiveCount >= objective)
+        {
+            Debug.Log("Over");
+        }
+
+    }
+
+    public void AllyHit()
+    {
+        objectiveCount--;
     }
 
     public void Toque()

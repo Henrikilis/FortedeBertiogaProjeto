@@ -12,6 +12,8 @@ TagManager:
   - CameraMovLeft
   - escudo
   - dano
+  - AllyShip
+  - EnemyShip
   layers:
   - Default
   - TransparentFX
