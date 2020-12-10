@@ -30,6 +30,7 @@ public class CannonPuzzleScript : MonoBehaviour
 
     private void Update()
     {
+        RenderSettings.skybox.SetFloat("_Rotation", Time.time);
         Spawner();
         AllySpawner();
     }
