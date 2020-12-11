@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direita: 1
-  speed: 10
+  speed: 7
   manager: {fileID: 0}
 --- !u!1 &4642397706723931287
 GameObject:

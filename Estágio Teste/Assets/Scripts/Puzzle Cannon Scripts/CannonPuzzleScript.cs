@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CannonPuzzleScript : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class CannonPuzzleScript : MonoBehaviour
 
     [Header("Game Variables")]
     public float objective;
+    public float vidas = 3;
     [SerializeField]
     private float objectiveCount;
 
@@ -27,14 +29,27 @@ public class CannonPuzzleScript : MonoBehaviour
     [SerializeField]
     private float aCurrentSpawnTime;
 
+    [Header ("tela de termino")]
+    public GameObject winScreen;
+    public GameObject loseScreen;
+    private bool playing = true;
+
+    [Header("HUD")]
+    public TMP_Text inimigosAbatidosTxt;
+    public TMP_Text vidasTxt;
 
     private void Update()
     {
         RenderSettings.skybox.SetFloat("_Rotation", Time.time);
-        Spawner();
-        AllySpawner();
+        if (playing)
+        {
+            Spawner();
+            AllySpawner();
+        }
+        AttText();
     }
 
+    #region Funçoes Gerais
     private void Spawner()
     {
         currentSpawnTime += Time.deltaTime;
@@ -110,30 +125,63 @@ public class CannonPuzzleScript : MonoBehaviour
         objectiveCount++;
         if (objectiveCount >= objective)
         {
-            Debug.Log("Over");
+            Vitoria();
         }
 
     }
 
     public void AllyHit()
     {
-        objectiveCount--;
-    }
-
-    public void Toque()
-    {
-        Debug.Log("tapped");
-        objectiveCount++;
-        if (objectiveCount >= objective)
+        vidas--;
+        if (vidas <= 0)
         {
-            Debug.Log("Over");
+            Derrota();
         }
     }
+    #endregion
 
-    public void AllyToque()
+    #region Vitoria/Derrota
+    private void Vitoria()
     {
-        Debug.Log("ally");
-        objectiveCount--;
+        playing = false;
+
+        winScreen.SetActive(true);
     }
+
+    private void Derrota()
+    {
+        playing = false;
+
+        loseScreen.SetActive(true);
+    }
+    #endregion
+
+    #region HUD
+
+    private void AttText()
+    {
+        inimigosAbatidosTxt.text = "Inimigos Afundados: " + objectiveCount.ToString() + "/" + objective.ToString();
+        vidasTxt.text = "Vidas: " + vidas.ToString();
+    }
+
+    #endregion
+
+
+    //usava para 2D
+    //public void Toque()
+    //{
+    //    Debug.Log("tapped");
+    //    objectiveCount++;
+    //    if (objectiveCount >= objective)
+    //    {
+    //        Debug.Log("Over");
+    //    }
+    //}
+
+    //public void AllyToque()
+    //{
+    //    Debug.Log("ally");
+    //    objectiveCount--;
+    //}
 
 }
