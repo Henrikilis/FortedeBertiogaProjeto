@@ -43,4 +43,14 @@ public class BeginOfSceneDialogue : MonoBehaviour
 
         Destroy(this.gameObject, 1f);
     }
+
+    public void BeginDialogueEnds()
+    {
+        alrScript.isInteracting = false;
+        foreach (Collider c in colliders)
+        {
+            c.enabled = true;
+        }
+        Destroy(this.gameObject, 1f);
+    }
 }
