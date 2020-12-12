@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class PadrePiece : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
+public class PadrePiece : MonoBehaviour
 {
     [HideInInspector] public PuzzlePadreController controller;
     public List<PadrePiece> snapGroup;
@@ -30,35 +30,46 @@ public class PadrePiece : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
     {
         if (clicked)
         {
-            Vector3 pos = Input.mousePosition + distDifference;
+            Vector3 point = new Vector3();
+            Vector2 mousePos = new Vector2();
 
-            GetComponent<RectTransform>().position = pos;
+            mousePos.x = Input.mousePosition.x;
+            mousePos.y = Input.mousePosition.y;
+
+            point = Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, Camera.main.nearClipPlane));
+
+            Vector3 pos = point + distDifference;
+
+            GetComponent<Transform>().position = pos;
 
             foreach (var item in snapGroup)
             {
-                Vector3 pos2 = GetComponent<RectTransform>().localPosition + (item.originalPos - originalPos);
-                item.GetComponent<RectTransform>().localPosition = pos2;
+                Vector3 pos2 = GetComponent<Transform>().localPosition + (item.originalPos - originalPos);
+                item.GetComponent<Transform>().localPosition = pos2;
             }
         }
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    public void TouchingDown()
     {
         foreach (var item in snapGroup)
         {
-            Debug.Log("A");
             foreach (var item2 in item.connectors)
             {
-                Debug.Log("B");
                 if (!connectors.Contains(item2))
-                {
-                    Debug.Log("C");
                     connectors.Add(item2);
-                }
             }
         }
 
-        distDifference = GetComponent<RectTransform>().position - Input.mousePosition;
+        Vector3 point = new Vector3();
+        Vector2 mousePos = new Vector2();
+
+        mousePos.x = Input.mousePosition.x;
+        mousePos.y = Input.mousePosition.y;
+
+        point = Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, Camera.main.nearClipPlane));
+        distDifference = GetComponent<Transform>().position - point;
+
         clicked = true;
         foreach (var item in connectors)
         {
@@ -66,7 +77,7 @@ public class PadrePiece : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
         }
     }
 
-    public void OnPointerUp(PointerEventData eventData)
+    public void TouchingUp()
     {
         clicked = false;
         foreach (var item in connectors)
@@ -101,8 +112,8 @@ public class PadrePiece : MonoBehaviour, IPointerUpHandler, IPointerDownHandler
                     item.snapGroup.Add(item2);
             }
 
-            Vector3 pos = GetComponent<RectTransform>().localPosition + (item.originalPos - originalPos);
-            item.GetComponent<RectTransform>().localPosition = pos;
+            Vector3 pos = GetComponent<Transform>().localPosition + (item.originalPos - originalPos);
+            item.GetComponent<Transform>().localPosition = pos;
         }
     }
 }

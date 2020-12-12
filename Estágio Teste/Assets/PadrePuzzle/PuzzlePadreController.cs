@@ -5,7 +5,7 @@ using UnityEngine;
 public class PuzzlePadreController : MonoBehaviour
 {
     public PadrePiece[] pieces;
-    public RectTransform[] startingPos;
+    public Transform[] startingPos;
     [HideInInspector] public List<PieceConnector> connectors;
 
     public GameObject victoryScreen;
@@ -15,7 +15,7 @@ public class PuzzlePadreController : MonoBehaviour
         foreach (var item in pieces)
         {
             item.controller = this;
-            item.originalPos = item.GetComponent<RectTransform>().localPosition;
+            item.originalPos = item.GetComponent<Transform>().localPosition;
         }
         RandomizePiecePos();
     }
@@ -42,7 +42,7 @@ public class PuzzlePadreController : MonoBehaviour
 
     void RandomizePiecePos()
     {
-        int[] xxx = { 0, 1, 2, 3, 4, 5, 6, 7 };
+        int[] xxx = { 0, 1, 2, 3, 4, 5 };
 
         for (int t = 0; t < xxx.Length; t++)
         {
@@ -54,7 +54,7 @@ public class PuzzlePadreController : MonoBehaviour
 
         for (int i = 0; i < startingPos.Length; i++)
         {
-            pieces[xxx[i]].GetComponent<RectTransform>().position = startingPos[i].position;
+            pieces[xxx[i]].GetComponent<Transform>().position = startingPos[i].position;
         }
     }
 }
