@@ -29,15 +29,21 @@ public class CannonPuzzleScript : MonoBehaviour
     [SerializeField]
     private float aCurrentSpawnTime;
 
-    [Header ("tela de termino")]
+    [Header("tela de termino")]
+    public GameObject PreStartScreen;
     public GameObject winScreen;
     public GameObject loseScreen;
-    private bool playing = true;
+    public bool playing = false;
 
     [Header("HUD")]
     public TMP_Text inimigosAbatidosTxt;
     public TMP_Text vidasTxt;
 
+    private void Start()
+    {
+        playing = false;
+        PreStartScreen.SetActive(true);
+    }
     private void Update()
     {
         RenderSettings.skybox.SetFloat("_Rotation", Time.time);
@@ -88,12 +94,13 @@ public class CannonPuzzleScript : MonoBehaviour
 
         Vector3 spawnPos = new Vector3(Camera.main.transform.position.x + r2, spawnHeight, r1);
         GameObject obj = Instantiate(shipPrefab);
-        Destroy(obj, 15);
+        Destroy(obj, 60);
         obj.transform.position = spawnPos;
         obj.GetComponent<ShipScript>().manager = this;
         if (r2 > 0)
         {
             obj.GetComponent<ShipScript>().direita = false;
+            obj.transform.localScale = new Vector3(obj.transform.localScale.x * -1, obj.transform.localScale.y, obj.transform.localScale.z);
         }
     }
 
@@ -111,12 +118,13 @@ public class CannonPuzzleScript : MonoBehaviour
 
         Vector3 spawnPos = new Vector3(Camera.main.transform.position.x + r2, spawnHeight, r1);
         GameObject obj = Instantiate(allyShipPrefab);
-        Destroy(obj, 15);
+        Destroy(obj, 60);
         obj.transform.position = spawnPos;
         obj.GetComponent<ShipScript>().manager = this;
         if (r2 > 0)
         {
             obj.GetComponent<ShipScript>().direita = false;
+            obj.transform.localScale = new Vector3(obj.transform.localScale.x * -1, obj.transform.localScale.y, obj.transform.localScale.z);
         }
     }
 
@@ -154,6 +162,16 @@ public class CannonPuzzleScript : MonoBehaviour
 
         loseScreen.SetActive(true);
     }
+    #endregion
+
+    #region Start
+
+    public void StartMinigame()
+    {
+        PreStartScreen.SetActive(false);
+        playing = true;
+    }
+
     #endregion
 
     #region HUD

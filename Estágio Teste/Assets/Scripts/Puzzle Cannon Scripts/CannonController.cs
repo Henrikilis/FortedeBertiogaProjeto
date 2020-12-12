@@ -65,7 +65,7 @@ public class CannonController : MonoBehaviour
             xDegrees -= direction * speed * friction;
             audioS.PlayOneShot(a_clips[2]);
         }
-        Debug.Log(xDegrees);
+        //Debug.Log(xDegrees);
     }
 
     public void FireCannon()
