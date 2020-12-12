@@ -9,6 +9,7 @@ public class PadrePiece : MonoBehaviour
     [HideInInspector] public PuzzlePadreController controller;
     public List<PadrePiece> snapGroup;
     public List<PieceConnector> connectors;
+
     [HideInInspector] public Vector3 originalPos;
 
     Vector3 distDifference;
@@ -75,11 +76,16 @@ public class PadrePiece : MonoBehaviour
         {
             item.GetComponent<BoxCollider>().isTrigger = false;
         }
+
+
+
+
     }
 
     public void TouchingUp()
     {
         clicked = false;
+
         foreach (var item in connectors)
         {
             item.GetComponent<BoxCollider>().isTrigger = true;

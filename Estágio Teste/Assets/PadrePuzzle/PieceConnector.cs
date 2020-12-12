@@ -9,6 +9,9 @@ public class PieceConnector : MonoBehaviour
     public bool isSnapped;
     [HideInInspector] public bool foundConnection;
 
+    public GameObject ConnectorFX;
+
+
     private void Start()
     {
         parentPiece = transform.parent.GetComponent<PadrePiece>();
@@ -29,4 +32,27 @@ public class PieceConnector : MonoBehaviour
             foundConnection = false;
         }
     }
+
+    private void Update()
+    {
+        if (ConnectorFX != null)
+        {
+            if (!isSnapped)
+            {
+                if (Vector3.Distance(connector.transform.position, this.transform.position) < 1.5f)
+                {
+                    ConnectorFX.SetActive(true);
+                }
+                else
+                {
+                    ConnectorFX.SetActive(false);
+                }
+            }
+            else
+            {
+                ConnectorFX.SetActive(false);
+            }
+        }
+    }
+
 }
