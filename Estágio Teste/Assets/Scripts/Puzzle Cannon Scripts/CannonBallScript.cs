@@ -39,7 +39,7 @@ public class CannonBallScript : MonoBehaviour
         if (collision.transform.CompareTag("EnemyShip"))
         {
             ct.EnemyHit();
-            Destroy(collision.gameObject);
+            collision.gameObject.GetComponent<ShipScript>().dead = true;
             FX_Impact.SetActive(true);
             DeactivateBall();
             Destroy(gameObject, 5);
@@ -47,7 +47,7 @@ public class CannonBallScript : MonoBehaviour
         if (collision.transform.CompareTag("AllyShip"))
         {
             ct.AllyHit();
-            Destroy(collision.gameObject);
+            collision.gameObject.GetComponent<ShipScript>().dead = true;
             FX_Impact.SetActive(true);
             DeactivateBall();
             Destroy(gameObject, 5);

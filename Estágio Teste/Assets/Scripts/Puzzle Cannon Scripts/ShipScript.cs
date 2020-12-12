@@ -14,6 +14,11 @@ public class ShipScript : MonoBehaviour
 
     public CannonPuzzleScript manager;
 
+    public bool dead;
+    bool once;
+    public GameObject modelAlive;
+    public GameObject modelDead;
+
     //void OnEnable()
     //{
     //    GetComponent<TapGesture>().Tapped += Toque;
@@ -24,9 +29,28 @@ public class ShipScript : MonoBehaviour
     //    GetComponent<TapGesture>().Tapped -= Toque;
     //}
 
+    private void Update()
+    {
+        if (dead && !once)
+        {
+            once = true;
+
+            modelAlive.SetActive(false);
+            modelDead.SetActive(true);
+            Destroy(gameObject, 10);
+        }
+    }
+
     private void FixedUpdate()
     {
-        MoveShip();
+        if (!dead)
+        {
+            MoveShip();
+        }
+        else
+        {
+            MoveShipDead();
+        }
     }
 
     void MoveShip ()
@@ -42,6 +66,26 @@ public class ShipScript : MonoBehaviour
         {
             pos.x -= speed * Time.deltaTime;
         }
+
+        transform.position = pos;
+
+    }
+
+    void MoveShipDead()
+    {
+        Vector3 pos = transform.position;
+
+        if (direita)
+        {
+            pos.x += speed/3 * Time.deltaTime;
+        }
+
+        else
+        {
+            pos.x -= speed/3 * Time.deltaTime;
+        }
+
+        pos.y -= speed / 3 * Time.deltaTime;
 
         transform.position = pos;
 
