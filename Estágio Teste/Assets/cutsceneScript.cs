@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class cutsceneScript : MonoBehaviour
 {
     public Animator camAnim;
@@ -11,6 +12,8 @@ public class cutsceneScript : MonoBehaviour
     public Image img2;
     public Image img3;
 
+   
+
     [SerializeField]
     private float timer1;
     [SerializeField]
@@ -18,9 +21,8 @@ public class cutsceneScript : MonoBehaviour
     [SerializeField]
     private float timer3;
 
-    // public Vector3 delta;
     public float Speed;
-
+    public float Speed2;
     private bool trans1;
     private bool trans2;
 
@@ -37,9 +39,13 @@ public class cutsceneScript : MonoBehaviour
 
     private void LateUpdate()
     {
+
+        
+
         var delta = Vector3.one * Speed * Time.deltaTime;
+        var delta2 = Vector3.one * Speed2 * Time.deltaTime;
         var escalaDesejada = img1.transform.localScale + delta;
-        var escalaDesejada2 = img2.transform.localScale + delta;
+        var escalaDesejada2 = img2.transform.localScale + delta2;
 
         if (!trans1 && !trans2)
         img1.transform.localScale = escalaDesejada;
