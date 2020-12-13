@@ -30,6 +30,8 @@ public class MainMenuController : MonoBehaviour
     public void PlayGame()
     {
         SceneManager.LoadScene(beginGameScene);
+        PadrePuzzleEnds.puzzlePadreEnds = false;
+        PadrePuzzleEnds.puzzleCannonEnds = false;
         //mainMenuPanel.SetActive(false);
         //mainMenuOptionsPanel.SetActive(false);
     }

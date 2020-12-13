@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PuzzlePadreController : MonoBehaviour
 {
@@ -10,8 +11,11 @@ public class PuzzlePadreController : MonoBehaviour
 
     public GameObject victoryScreen;
 
+    public string changeScene;
+
     private void Awake()
     {
+        PadrePuzzleEnds.puzzlePadreEnds = false;
         foreach (var item in pieces)
         {
             item.controller = this;
@@ -21,6 +25,7 @@ public class PuzzlePadreController : MonoBehaviour
     }
     private void Update()
     {
+        Debug.Log("sdfsf: " + PadrePuzzleEnds.puzzlePadreEnds);
         VictoryCheck();
     }
 
@@ -31,7 +36,13 @@ public class PuzzlePadreController : MonoBehaviour
         {
             if (!item.isSnapped) victory = false;
         }
-        if (victory) StartCoroutine(Victory());
+        //if (victory) StartCoroutine(Victory());
+        if (victory)
+        {
+            StartCoroutine(Victory());
+            SceneManager.LoadScene(changeScene);
+            PadrePuzzleEnds.puzzlePadreEnds = true;
+        }
     }
 
     IEnumerator Victory()

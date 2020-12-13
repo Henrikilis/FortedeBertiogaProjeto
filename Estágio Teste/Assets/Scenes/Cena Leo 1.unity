@@ -10498,6 +10498,111 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 896051059dfd0cf4fbc35923e2d53462, type: 3}
   m_PrefabInstance: {fileID: 240658776}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &250107642
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 250107645}
+  - component: {fileID: 250107644}
+  - component: {fileID: 250107643}
+  m_Layer: 0
+  m_Name: InititatorDialogueAfterPuzzle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &250107643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250107642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd79c1fe1fc76754dacd10eb4c9c4e28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueM: {fileID: 1273200523}
+  dialogue:
+    phrases:
+    - speakerName: Fantasma
+      speakerImage: {fileID: 21300000, guid: ef54815ed37412743b45146989e997e3, type: 3}
+      ghost: 1
+      phrase: "Ainda bem que conseguimos consertar a est\xE1tua de Jos\xE9 de Anchieta."
+      btnContinue: Continuar
+    - speakerName: Fantasma
+      speakerImage: {fileID: 21300000, guid: 454551112c43dd04094b6f6b9c71354a, type: 3}
+      ghost: 1
+      phrase: Ei olha, a porta que estava fechada finalmente abriu, vamos dar uma
+        olhada do lado de fora.
+      btnContinue: Sair
+    lastDialogueAction:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 250107644}
+          m_TargetAssemblyTypeName: BeginOfSceneDialogueAfterPuzzles, Assembly-CSharp
+          m_MethodName: BeginDialogueEnds
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &250107644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250107642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bb56ecf6205eac42962acae31b24556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movePlayerCameraButtons: {fileID: 997386853}
+  interactWithObjects: {fileID: 1064703767}
+  colliders: []
+  alrScript: {fileID: 1064703768}
+  sceneEndGame: Exterior
+  showDialogueInBeginScene:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 250107643}
+        m_TargetAssemblyTypeName: DialogueInitiator, Assembly-CSharp
+        m_MethodName: Initiator
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!4 &250107645
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250107642}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.916356, y: 1.399663, z: -14.001561}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &255926178
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20109,8 +20214,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.039, y: 1.65, z: -12.27}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.27, y: 1.65, z: -14.385}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -20341,7 +20446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 0, z: -10}
+  m_FollowOffset: {x: 0.32500008, y: 0, z: -12.109999}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -25825,6 +25930,51 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1081308678}
   m_Mesh: {fileID: 2399613725515231898, guid: a5b16db6a086e9c4ea0f1972c6b27509, type: 3}
+--- !u!1 &1085726149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1085726151}
+  - component: {fileID: 1085726150}
+  m_Layer: 0
+  m_Name: Door
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1085726150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085726149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef1f9470c79abe746aacc066dd330563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorLocked: {fileID: 1825416047}
+  doorUnlocked: {fileID: 1407269412}
+--- !u!4 &1085726151
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085726149}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.916356, y: 1.399663, z: -14.001561}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1086391431
 GameObject:
   m_ObjectHideFlags: 0
@@ -26116,14 +26266,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1151337371}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.039, y: 1.65, z: -12.27}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0.27, y: 1.65, z: -14.385}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 979867685}
   m_Father: {fileID: 0}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &1151337374
 MonoBehaviour:
   m_ObjectHideFlags: 0

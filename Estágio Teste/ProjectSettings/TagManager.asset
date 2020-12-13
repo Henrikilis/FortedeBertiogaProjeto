@@ -15,6 +15,7 @@ TagManager:
   - AllyShip
   - EnemyShip
   - Agua
+  - PadrePuzzleController
   layers:
   - Default
   - TransparentFX

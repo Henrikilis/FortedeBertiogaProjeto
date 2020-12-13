@@ -647,6 +647,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipPrefab: {fileID: 3218649719700328964, guid: 6c6a255298bc9dc4eb840f125e262ddd, type: 3}
   allyShipPrefab: {fileID: 5461076295042937692, guid: fff3ead0b0ad3d249851fdcd72c179f0, type: 3}
+  sceneToChange: Exterior
   objective: 5
   vidas: 3
   objectiveCount: 0
@@ -1794,7 +1795,9 @@ MonoBehaviour:
   breakBeforeColorGrading: 0
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
-  m_AfterStackBundles: []
+  m_AfterStackBundles:
+  - assemblyQualifiedName: DistortionPPSSettings, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1153258569
 GameObject:
   m_ObjectHideFlags: 0
@@ -1923,7 +1926,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 17.45
+  m_fontSize: 29.75
   m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3449,7 +3452,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 17.5
+  m_fontSize: 31.15
   m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 1

@@ -3,28 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
-public class BeginOfSceneDialogue : MonoBehaviour
+public class BeginOfSceneDialogueAfterPuzzles : MonoBehaviour
 {
     public GameObject movePlayerCameraButtons;
     public GameObject interactWithObjects;
     public Collider[] colliders;
     public AlreadyInteracting alrScript;
 
+    public string sceneEndGame;
+
     [SerializeField]
     private UnityEvent showDialogueInBeginScene;
     // Start is called before the first frame update
     void Start()
     {
-        if(PadrePuzzleEnds.puzzleCannonEnds == true && SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Exterior"))
-        {
-            this.gameObject.SetActive(false);
-            return;
-        }
-        if (PadrePuzzleEnds.puzzlePadreEnds == true && SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Cena Leo 1"))
-        {
-            this.gameObject.SetActive(false);
-            return;
-        }
         alrScript.isInteracting = true;
         showDialogueInBeginScene.Invoke();
         movePlayerCameraButtons.SetActive(false);
@@ -42,25 +34,18 @@ public class BeginOfSceneDialogue : MonoBehaviour
 
     }
 
-    public void ActivateObjects()
-    {
-        movePlayerCameraButtons.SetActive(true);
-        alrScript.isInteracting = false;
-        foreach (Collider c in colliders)
-        {
-            c.enabled = true;
-        }
-
-        Destroy(this.gameObject, 1f);
-    }
-
     public void BeginDialogueEnds()
     {
         alrScript.isInteracting = false;
-        foreach (Collider c in colliders)
-        {
-            c.enabled = true;
-        }
-        Destroy(this.gameObject, 1f);
+        //movePlayerCameraButtons.SetActive(true);
+        SceneManager.LoadScene(sceneEndGame);
+        //Destroy(this.gameObject, 1f);
+    }
+
+    public void EndGame()
+    {
+        alrScript.isInteracting = false;
+        SceneManager.LoadScene(sceneEndGame);
     }
 }
+

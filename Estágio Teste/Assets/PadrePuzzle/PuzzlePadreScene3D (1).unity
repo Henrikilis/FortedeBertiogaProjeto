@@ -19797,7 +19797,7 @@ GameObject:
   - component: {fileID: 571995813}
   m_Layer: 0
   m_Name: PuzzleController
-  m_TagString: Untagged
+  m_TagString: PadrePuzzleController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19830,6 +19830,7 @@ MonoBehaviour:
   - {fileID: 1233996618}
   connectors: []
   victoryScreen: {fileID: 719541725}
+  changeScene: Cena Leo 1
 --- !u!4 &571995814
 Transform:
   m_ObjectHideFlags: 0

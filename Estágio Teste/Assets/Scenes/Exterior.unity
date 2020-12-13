@@ -1565,6 +1565,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 82bfb7dafe8108c4abb313ef95b9133e, type: 3}
   m_PrefabInstance: {fileID: 1245280783}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &729030608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729030607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84e1ab21ef3444b4bb7cc3985d7c6bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleScene: Cannon2
 --- !u!4 &729030610 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 82bfb7dafe8108c4abb313ef95b9133e, type: 3}
@@ -1672,7 +1685,19 @@ MonoBehaviour:
       btnContinue: Continuar
     lastDialogueAction:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 729030608}
+          m_TargetAssemblyTypeName: LoadPuzzlesScenes, Assembly-CSharp
+          m_MethodName: LoadPuzzleScene
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &776994088
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8078,6 +8103,147 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1209580308
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1209580311}
+  - component: {fileID: 1209580310}
+  - component: {fileID: 1209580309}
+  m_Layer: 0
+  m_Name: InitiateDialogueAfterPuzzle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1209580309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209580308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd79c1fe1fc76754dacd10eb4c9c4e28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueM: {fileID: 1273200523}
+  dialogue:
+    phrases:
+    - speakerName: Fantasma
+      speakerImage: {fileID: 21300000, guid: 27066df00197d3f4589789d38f74ede5, type: 3}
+      ghost: 1
+      phrase: "Devo dizer, estou impressionado com voc\xEA! Sinto que o Forte est\xE1
+        em boas m\xE3os."
+      btnContinue: Continuar
+    - speakerName: Guarda
+      speakerImage: {fileID: 21300000, guid: 925a59c4812cf6d47ba6182f93bbdeea, type: 3}
+      ghost: 0
+      phrase: "Obrigado seu fantasma, mas eu preciso perguntar, quem \xE9 voc\xEA
+        mesmo?"
+      btnContinue: Continuar
+    - speakerName: Hans Staden
+      speakerImage: {fileID: 21300000, guid: 931863560b5887344921aadc4058d5b8, type: 3}
+      ghost: 1
+      phrase: "Oras, eu sou Hans Staden, famoso aventureiro, desbravador das ...oh,
+        o sol j\xE1 est\xE1 nascendo."
+      btnContinue: Continuar
+    - speakerName: Guarda
+      speakerImage: {fileID: 21300000, guid: 925a59c4812cf6d47ba6182f93bbdeea, type: 3}
+      ghost: 0
+      phrase: Qual o problema com o sol?
+      btnContinue: Continuar
+    - speakerName: Hans Staden
+      speakerImage: {fileID: 21300000, guid: 454551112c43dd04094b6f6b9c71354a, type: 3}
+      ghost: 1
+      phrase: "Eu s\xF3 consigo me manifestar durante a noite, mas n\xE3o se preocupe,
+        fantasmas n\xE3o podem morrer, ha ha ha."
+      btnContinue: Continuar
+    - speakerName: Hans Staden
+      speakerImage: {fileID: 21300000, guid: ef54815ed37412743b45146989e997e3, type: 3}
+      ghost: 1
+      phrase: "Eu espero que essa experi\xEAncia tenha te incentivado a fazer suas
+        pr\xF3prias pesquisas."
+      btnContinue: Continuar
+    - speakerName: Hans Staden
+      speakerImage: {fileID: 21300000, guid: 931863560b5887344921aadc4058d5b8, type: 3}
+      ghost: 1
+      phrase: "Descubra quem eu fui, por que os espanh\xF3is e os franceses atacaram
+        essa regi\xE3o, quem foi Martim Afonso de Souza !"
+      btnContinue: Continuar
+    - speakerName: Hans Staden
+      speakerImage: {fileID: 21300000, guid: 27066df00197d3f4589789d38f74ede5, type: 3}
+      ghost: 1
+      phrase: "Mas por hora, eu preciso ir, nos vemos numa pr\xF3xima noite, meu
+        amigo Guardi\xE3o do Forte!"
+      btnContinue: Continuar
+    lastDialogueAction:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1209580310}
+          m_TargetAssemblyTypeName: BeginOfSceneDialogueAfterPuzzles, Assembly-CSharp
+          m_MethodName: EndGame
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1209580310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209580308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bb56ecf6205eac42962acae31b24556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movePlayerCameraButtons: {fileID: 997386853}
+  interactWithObjects: {fileID: 1064703767}
+  colliders: []
+  alrScript: {fileID: 1064703768}
+  sceneEndGame: MainMenu
+  showDialogueInBeginScene:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1209580309}
+        m_TargetAssemblyTypeName: DialogueInitiator, Assembly-CSharp
+        m_MethodName: Initiator
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!4 &1209580311
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209580308}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 41
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1224763877
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class CannonPuzzleScript : MonoBehaviour
 {
     public GameObject shipPrefab;
     public GameObject allyShipPrefab;
+    public string sceneToChange;
 
     [Header("Game Variables")]
     public float objective;
@@ -153,7 +155,11 @@ public class CannonPuzzleScript : MonoBehaviour
     {
         playing = false;
 
+        PadrePuzzleEnds.puzzleCannonEnds = true;
+
         winScreen.SetActive(true);
+
+        SceneManager.LoadScene(sceneToChange);
     }
 
     private void Derrota()
