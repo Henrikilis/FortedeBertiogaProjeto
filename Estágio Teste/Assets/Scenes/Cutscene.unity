@@ -811,6 +811,7 @@ MonoBehaviour:
   img1: {fileID: 1712905052}
   img2: {fileID: 382528904}
   img3: {fileID: 1898709403}
+  sceneToChange: Cena Leo 1
   timer1: 5
   timer2: 8
   timer3: 15

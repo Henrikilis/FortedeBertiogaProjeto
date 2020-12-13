@@ -8447,6 +8447,7 @@ MonoBehaviour:
   interactWithObjects: {fileID: 1064703767}
   colliders: []
   alrScript: {fileID: 1064703768}
+  dialogueAfterPuzzle: {fileID: 1209580308}
   showDialogueInBeginScene:
     m_PersistentCalls:
       m_Calls:
@@ -8492,13 +8493,13 @@ MonoBehaviour:
   dialogue:
     phrases:
     - speakerName: Fantasma
-      speakerImage: {fileID: 21300000, guid: d35f97268fd13d847b7854eacb9db27b, type: 3}
+      speakerImage: {fileID: 21300000, guid: ef54815ed37412743b45146989e997e3, type: 3}
       ghost: 1
       phrase: "A vista daqui \xE9 incrivel n\xE3o ?"
       btnContinue: Continuar
-    - speakerName: Guarda
-      speakerImage: {fileID: 21300000, guid: f1b7a615205732546bf3d2cdd0312f1e, type: 3}
-      ghost: 0
+    - speakerName: Fantasma
+      speakerImage: {fileID: 21300000, guid: 454551112c43dd04094b6f6b9c71354a, type: 3}
+      ghost: 1
       phrase: "Aquilo que eu estou vendo \xE9 o canh\xE3o do forte? Vamos dar uma
         olhada mais de perto."
       btnContinue: Continuar

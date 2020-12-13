@@ -32300,6 +32300,7 @@ MonoBehaviour:
   interactWithObjects: {fileID: 1064703767}
   colliders: []
   alrScript: {fileID: 1064703768}
+  dialogueAfterPuzzle: {fileID: 250107642}
   showDialogueInBeginScene:
     m_PersistentCalls:
       m_Calls:

@@ -9,19 +9,30 @@ public class BeginOfSceneDialogue : MonoBehaviour
     public GameObject interactWithObjects;
     public Collider[] colliders;
     public AlreadyInteracting alrScript;
+    public GameObject dialogueAfterPuzzle;
 
     [SerializeField]
     private UnityEvent showDialogueInBeginScene;
     // Start is called before the first frame update
     void Start()
     {
-        if(PadrePuzzleEnds.puzzleCannonEnds == true && SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Exterior"))
+        if(PadrePuzzleEnds.puzzlePadreEnds == false && SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Cena Leo 1"))
         {
+            dialogueAfterPuzzle.SetActive(false);
+        }
+        if (PadrePuzzleEnds.puzzleCannonEnds == false && SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Exterior"))
+        {
+            dialogueAfterPuzzle.SetActive(false);
+        }
+        if (PadrePuzzleEnds.puzzleCannonEnds == true && SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Exterior"))
+        {
+            dialogueAfterPuzzle.SetActive(true);
             this.gameObject.SetActive(false);
             return;
         }
         if (PadrePuzzleEnds.puzzlePadreEnds == true && SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Cena Leo 1"))
         {
+            dialogueAfterPuzzle.SetActive(true);
             this.gameObject.SetActive(false);
             return;
         }

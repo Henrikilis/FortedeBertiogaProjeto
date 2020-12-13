@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 public class cutsceneScript : MonoBehaviour
 {
@@ -10,6 +10,7 @@ public class cutsceneScript : MonoBehaviour
     public Image img1;
     public Image img2;
     public Image img3;
+    public string sceneToChange;
 
    
 
@@ -79,7 +80,8 @@ public class cutsceneScript : MonoBehaviour
         panelAnim.SetBool("start", true);
         trans1 = false;
         trans2 = false;
-        img3.gameObject.SetActive(false);
+        SceneManager.LoadScene(sceneToChange);
+        //img3.gameObject.SetActive(false);
 
     }
 

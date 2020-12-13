@@ -1353,7 +1353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenuPanel: {fileID: 456704969}
   mainMenuOptionsPanel: {fileID: 197611363}
-  beginGameScene: Cena Leo 1
+  beginGameScene: Cutscene
 --- !u!114 &727403635
 MonoBehaviour:
   m_ObjectHideFlags: 0
