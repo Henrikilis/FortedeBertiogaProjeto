@@ -38,15 +38,22 @@ public class CannonBallScript : MonoBehaviour
         }
         if (collision.transform.CompareTag("EnemyShip"))
         {
-            ct.EnemyHit();
+            if (!collision.gameObject.GetComponent<ShipScript>().dead)
+            {
+                ct.EnemyHit();
+            }
             collision.gameObject.GetComponent<ShipScript>().dead = true;
             FX_Impact.SetActive(true);
             DeactivateBall();
             Destroy(gameObject, 5);
+
         }
         if (collision.transform.CompareTag("AllyShip"))
         {
-            ct.AllyHit();
+            if (!collision.gameObject.GetComponent<ShipScript>().dead)
+            {
+                ct.AllyHit();
+            }
             collision.gameObject.GetComponent<ShipScript>().dead = true;
             FX_Impact.SetActive(true);
             DeactivateBall();

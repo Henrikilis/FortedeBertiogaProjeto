@@ -11,7 +11,6 @@ public class PieceConnector : MonoBehaviour
 
     public GameObject ConnectorFX;
 
-
     private void Start()
     {
         parentPiece = transform.parent.GetComponent<PadrePiece>();
@@ -35,6 +34,8 @@ public class PieceConnector : MonoBehaviour
 
     private void Update()
     {
+
+
         if (ConnectorFX != null)
         {
             if (!isSnapped)

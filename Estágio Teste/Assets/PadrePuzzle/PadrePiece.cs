@@ -12,6 +12,8 @@ public class PadrePiece : MonoBehaviour
 
     [HideInInspector] public Vector3 originalPos;
 
+    public AudioSource SFX;
+
     Vector3 distDifference;
     bool clicked;
 
@@ -108,7 +110,10 @@ public class PadrePiece : MonoBehaviour
         foreach (var item in pieceConnector.connector.parentPiece.snapGroup)
         {
             if (!snapGroup.Contains(item))
+            {
+                SFX.Play();
                 snapGroup.Add(item);
+            }
         }
         foreach (var item in snapGroup)
         {
@@ -120,6 +125,7 @@ public class PadrePiece : MonoBehaviour
 
             Vector3 pos = GetComponent<Transform>().localPosition + (item.originalPos - originalPos);
             item.GetComponent<Transform>().localPosition = pos;
+
         }
     }
 }
