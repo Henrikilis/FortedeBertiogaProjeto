@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hiroshi's Scenes/Cannon2.unity
     guid: fc2ed99f075f79d4197821f41b54a008
-  - enabled: 1
+  - enabled: 0
     path: Assets/EscudoPuzzle/EscudoPuzzleScene.unity
     guid: 08ceb0f95e7ba4d45ba9bd0642ab0c5a
   m_configObjects: {}
