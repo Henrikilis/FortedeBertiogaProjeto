@@ -13,6 +13,7 @@ public class CannonPuzzleScript : MonoBehaviour
     [Header("Game Variables")]
     public float objective;
     public float vidas = 3;
+    public float maxVidas = 3;
     [SerializeField]
     private float objectiveCount;
 
@@ -84,10 +85,10 @@ public class CannonPuzzleScript : MonoBehaviour
 
     private void Spawn()
     {
-        float r1 = Random.Range(15, 40);
+        float r1 = Random.Range(15, 50);
 
 
-        float r2 = 50;
+        float r2 = 75;
 
         if (Random.value < 0.5f)
         {
@@ -108,10 +109,10 @@ public class CannonPuzzleScript : MonoBehaviour
 
     private void SpawnAlly()
     {
-        float r1 = Random.Range(15, 40);
+        float r1 = Random.Range(15, 50);
 
 
-        float r2 = 50;
+        float r2 = 75;
 
         if (Random.value < 0.5f)
         {
@@ -135,7 +136,7 @@ public class CannonPuzzleScript : MonoBehaviour
         objectiveCount++;
         if (objectiveCount >= objective)
         {
-            Vitoria();
+            StartCoroutine(Vitoria());
         }
 
     }
@@ -151,13 +152,15 @@ public class CannonPuzzleScript : MonoBehaviour
     #endregion
 
     #region Vitoria/Derrota
-    private void Vitoria()
+    private IEnumerator Vitoria()
     {
         playing = false;
 
         PadrePuzzleEnds.puzzleCannonEnds = true;
 
         winScreen.SetActive(true);
+
+        yield return new WaitForSeconds(3);
 
         SceneManager.LoadScene(sceneToChange);
     }
@@ -168,6 +171,19 @@ public class CannonPuzzleScript : MonoBehaviour
 
         loseScreen.SetActive(true);
     }
+
+    public void Reiniciar()
+    {
+        currentSpawnTime = 0;
+        aCurrentSpawnTime = 0;
+
+        vidas = maxVidas;
+        objectiveCount = 0;
+
+        playing = true;
+        loseScreen.SetActive(false);
+    }
+
     #endregion
 
     #region Start
